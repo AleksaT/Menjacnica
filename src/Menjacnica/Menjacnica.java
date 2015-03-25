@@ -10,6 +10,7 @@ public LinkedList<Datum> getDatumi() {
 }
 
 public void setDatumi(LinkedList<Datum> datumi) {
+	if(this.datumi.equals(datumi)) throw new RuntimeException("Vec postoji ova lista datuma");
 	this.datumi = datumi;
 }
 

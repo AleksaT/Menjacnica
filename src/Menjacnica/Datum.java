@@ -3,13 +3,14 @@ package Menjacnica;
 import java.util.GregorianCalendar;
 
 public class Datum extends Valuta {
-GregorianCalendar datum = new GregorianCalendar();
+private GregorianCalendar datum = new GregorianCalendar();
 
 public GregorianCalendar getDatum() {
 	return datum;
 }
 
 public void setDatum(GregorianCalendar datum) {
+	if(datum.before(this.datum.getTime())) throw new RuntimeException ("Datum ne moze biti pre danasnjeg");
 	this.datum = datum;
 }
 

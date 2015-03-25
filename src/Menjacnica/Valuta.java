@@ -10,30 +10,35 @@ public String getIme() {
 	return ime;
 }
 public void setIme(String ime) {
+	if(ime.length()<3 || ime.length()==0) throw new RuntimeException("Morate uneti naziv valute!");
 	this.ime = ime;
 }
 public String getsIme() {
 	return sIme;
 }
 public void setsIme(String sIme) {
+	if(sIme.length()>3 || sIme.length()==0) throw new RuntimeException("Skraceni naziv valute mora imati 3 karaktera!");
 	this.sIme = sIme;
 }
 public double getpKurs() {
 	return pKurs;
 }
 public void setpKurs(double pKurs) {
+	if(pKurs==0) throw new RuntimeException ("Morate uneti prodajni kurs!");
 	this.pKurs = pKurs;
 }
 public double getsKurs() {
 	return sKurs;
 }
 public void setsKurs(double sKurs) {
+	if(sKurs==0) throw new RuntimeException ("Morate uneti srednji kurs!");
 	this.sKurs = sKurs;
 }
 public double getkKurs() {
 	return kKurs;
 }
 public void setkKurs(double kKurs) {
+	if(kKurs==0) throw new RuntimeException ("Morate uneti kupovni kurs!");
 	this.kKurs = kKurs;
 }
 @Override
