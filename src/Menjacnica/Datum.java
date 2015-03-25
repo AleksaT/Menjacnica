@@ -1,10 +1,11 @@
 package Menjacnica;
 
 import java.util.GregorianCalendar;
+import java.util.LinkedList;
 
 public class Datum extends Valuta {
 private GregorianCalendar datum = new GregorianCalendar();
-
+private LinkedList<Valuta> valuteNaDan = new LinkedList<Valuta>();
 public GregorianCalendar getDatum() {
 	return datum;
 }
@@ -19,8 +20,13 @@ public int hashCode() {
 	final int prime = 31;
 	int result = super.hashCode();
 	result = prime * result + ((datum == null) ? 0 : datum.hashCode());
+	result = prime * result
+			+ ((valuteNaDan == null) ? 0 : valuteNaDan.hashCode());
 	return result;
 }
+
+
+
 
 @Override
 public boolean equals(Object obj) {
@@ -35,6 +41,11 @@ public boolean equals(Object obj) {
 		if (other.datum != null)
 			return false;
 	} else if (!datum.equals(other.datum))
+		return false;
+	if (valuteNaDan == null) {
+		if (other.valuteNaDan != null)
+			return false;
+	} else if (!valuteNaDan.equals(other.valuteNaDan))
 		return false;
 	return true;
 }
