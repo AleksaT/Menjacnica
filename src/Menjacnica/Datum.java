@@ -14,6 +14,14 @@ public void setDatum(GregorianCalendar datum) {
 	if(datum.before(this.datum.getTime())) throw new RuntimeException ("Datum ne moze biti pre danasnjeg");
 	this.datum = datum;
 }
+// set i get metoda za valuteNaDan
+public LinkedList<Valuta> getValuteNaDan() {
+	return valuteNaDan;
+}
+
+public void setValuteNaDan(LinkedList<Valuta> valuteNaDan) {
+	this.valuteNaDan = valuteNaDan;
+}
 
 @Override
 public int hashCode() {
