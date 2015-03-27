@@ -13,13 +13,14 @@ public class Implementacija extends Menjacnica implements MenjacnicaInterfejs {
     int size = listaDatuma.size();
   
 
-	public void dodavanjeKursa(GregorianCalendar datum, String valutaIme,
+	public void dodavanjeKursa(GregorianCalendar datum, String valutaIme, String sIme,
 			double prodajni, double srednji, double kupovni) {
 
 
 
 		datum2.setDatum(datum);
 		datum2.setIme(valutaIme);
+		datum2.setsIme(sIme);
 		datum2.setkKurs(kupovni);
 		datum2.setpKurs(prodajni);
 		datum2.setsKurs(srednji);
