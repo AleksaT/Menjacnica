@@ -15,6 +15,14 @@ public void setDatum(GregorianCalendar datum) {
 	this.datum = datum;
 }
 
+public LinkedList<Valuta> getValuteNaDan() {
+	return valuteNaDan;
+}
+
+public void setValuteNaDan(LinkedList<Valuta> valuteNaDan) {
+	this.valuteNaDan = valuteNaDan;
+}
+
 @Override
 public int hashCode() {
 	final int prime = 31;
